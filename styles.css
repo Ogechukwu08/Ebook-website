@@ -1,0 +1,234 @@
+.header{
+  height: 90px;
+  display: flex;
+  justify-items:left;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background-color: rgb(51, 15, 15);
+}
+body{
+  height: 2000px;
+  background-color: rgb(51, 15, 15);
+}
+.name{
+  color: white;
+}
+.overlay{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.text{
+  font-family: cursive;
+  margin-top: 10px;
+  color: white;
+  margin-left: 60px;
+}
+.search-bar{
+  width: 400px;
+  padding: 10px;
+  height: 25px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin-left: 50px;
+  position: relative;
+  z-index: 1;
+}
+.search-bar::placeholder{
+  padding-left: 10px;
+  color: rgb(51, 15, 15);
+}
+.book-img{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  top: 170px;
+}
+.book-img img{
+  width: 600px;
+  border-radius: 300px;
+  height: 600px;
+}
+.storybook{
+  margin-left: 80px;
+}
+h3{
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 600px;
+}
+.dropdown-btn{
+  background-color: whitesmoke;
+  color: rgb(39, 4, 4);
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.dropdown-btn:hover{
+  cursor: pointer;
+}
+.dropdown-list{
+  display: none;
+  position: absolute;
+  color: whitesmoke;
+  font-weight: bold;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  min-width: 150px;
+  border-radius: 5px;
+}
+.dropdown li{
+  padding: 10px;
+  cursor: pointer;
+}
+.search-btn{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 370px;
+  border: 1px solid white;
+  height: 10px;
+  border-radius: 20px;
+  top:90x;
+}
+
+/* Ensure the body and other elements are set up properly */
+.img-container {
+  position: relative;
+  text-align: center;
+}
+#books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates a responsive grid */
+  gap: 20px; /* Space between the cards */
+  padding: 0px 20px;
+  max-width: 1300px;
+  transform-origin: left;
+  position: absolute;
+  top: 0;
+  margin-top: 260px;
+}
+/* Style for each book card */
+.book-card {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.book-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.book-card p {
+  font-size: 14px;
+  color: #555;
+}
+.book-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.book-card a:hover {
+  background-color: white;
+  color: black;
+}
+.book-card:hover {
+  transform: translateY(-10px); /* Add a hover effect */
+}
+footer{
+  background-color: black;
+  position: absolute;
+  top: 6800px;
+  color: rgb(51, 15, 15);
+  height: 50px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+footer p{
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  #books {
+    grid-template-columns: repeat(3, 1fr); /* 3 books per row */
+  }
+
+  .search-bar {
+    width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  #books {
+    grid-template-columns: repeat(2, 1fr); /* 2 books per row */
+  }
+
+  .search-bar {
+    width: 250px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #books {
+    grid-template-columns: 1fr; /* 1 book per row */
+  }
+
+  .search-bar {
+    width: 200px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
